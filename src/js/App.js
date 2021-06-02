@@ -5,7 +5,7 @@ function App() {
   return (
     <header class="header">
       <div class="header-inner">
-      <h1 class="logo"><a href="#">MyProfile</a></h1>
+      <h1 class="logo"><a href="#">MyProfile!!</a></h1>
       <div class="menu-wrapper">
       </div>
       </div>
