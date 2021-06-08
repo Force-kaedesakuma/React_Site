@@ -1,0 +1,344 @@
+/* ブラウザの初期値をリセット */
+body{
+
+    margin: 0;
+    padding: 0;
+    background-color:#9cf;
+  }
+  
+  ul{
+    padding: 0;
+    margin: 0;
+  }
+  
+  li{list-style: none;}
+  
+  a{
+    color: #000;
+    text-decoration: none;
+  }
+  
+  h1{
+    margin: 0;
+    font-family: 'Alegreya Sans SC', sans-serif;
+  }
+  /* ここまでブラウザの初期値をリセット */
+  .header{
+    background-color: cornflowerblue;
+    position: fixed;
+    width: 100%;
+  }
+  
+  .header-inner{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+  }
+  
+  .menu-wrapper{
+    position: relative;
+  }
+  
+  .btn{
+    width: 100%;
+    display: block;      
+    width: 39px;      
+    height: 39px;      
+    position: absolute;
+    right: 0;
+    z-index: 999;/*追記：いつも一番上*/
+  }
+  
+  .bar{      
+    width: 20px;      
+    height: 1px;        
+    display: block;      
+    position: absolute;      
+    left: 50%;      
+    transform: translateX(-50%);      
+    background-color: #000;    
+  }
+  
+  .bar-top{ top: 10px;}
+  .bar-middle{    
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+  /*
+  .bar-bottom{ bottom: 10px;}
+  
+  .btn.close .bar-top{      
+    transform: translate(-50%,10px) rotate(45deg);      
+    transition: transform .3s;    
+  }  
+  
+  .btn.close .bar-middle{      
+    opacity: 0;       
+    transition: opacity .3s;    
+  }    
+  
+  .btn.close .bar-bottom{      
+    transform: translate(-50%,-8px) rotate(-45deg);      
+    transition: transform .3s;    
+  }
+  
+  .menu-lists{
+    display: none;
+    background-color: lightgreen;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 50px;
+    text-align: center;
+  }
+  */
+  
+  /*　ハンバーガーボタン　*/
+  .hamburger {
+    display : block;
+    position: fixed;
+    z-index : 3;
+    right : 13px;
+    top   : 12px;
+    width : 42px;
+    height: 42px;
+    cursor: pointer;
+    text-align: center;
+  }
+  .hamburger span {
+    display : block;
+    position: absolute;
+    width   : 30px;
+    height  : 2px ;
+    left    : 6px;
+    background : #555;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition   : 0.3s ease-in-out;
+    transition        : 0.3s ease-in-out;
+  }
+  .hamburger span:nth-child(1) {
+    top: 10px;
+  }
+  .hamburger span:nth-child(2) {
+    top: 20px;
+  }
+  .hamburger span:nth-child(3) {
+    top: 30px;
+  }
+  
+  /* ナビ開いてる時のボタン */
+  .hamburger.active span:nth-child(1) {
+    top : 16px;
+    left: 6px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform   : rotate(-45deg);
+    transform        : rotate(-45deg);
+  }
+  
+  .hamburger.active span:nth-child(2),
+  .hamburger.active span:nth-child(3) {
+    top: 16px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform   : rotate(45deg);
+    transform        : rotate(45deg);
+  }
+  
+  nav.globalMenuSp {
+    position: fixed;
+    z-index : 2;
+    top  : 0;
+    left : 0;
+    color: #000;
+    background: #fff;
+    text-align: center;
+    transform: translateX(100%);
+    transition: all 0.6s;
+    width: 100%;
+  }
+  
+  nav.globalMenuSp ul {
+    background: #ccc;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+  }
+  
+  nav.globalMenuSp ul li {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    border-bottom: 1px solid #fff;
+  }
+  nav.globalMenuSp ul li:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  nav.globalMenuSp ul li:hover{
+    background :#ddd;
+  }
+  
+  nav.globalMenuSp ul li a {
+    display: block;
+    color: #000;
+    padding: 1em 0;
+    text-decoration :none;
+  }
+  
+  /* このクラスを、jQueryで付与・削除する */
+  nav.globalMenuSp.active {
+    transform: translateX(0%);
+  }
+  
+  .main{
+    padding-top: 80px;/*追記*/
+    background: rgb(255, 255, 255);/*メインコンテンツを入れた後で消す*/
+  }
+  
+  /*プロフィールボックス*/
+  /*違うボックス*/
+  .box17{
+    margin:2em 0;
+    position: relative;
+    padding: 1em 2em;
+    margin: 1em 37rem;
+    width: 165px;
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+  }
+  .box17:before, .box17:after{
+    content: '';
+    position: absolute;
+    top: -10px;
+    width: 2px;
+    height: -webkit-calc(100% + 20px);
+    height: calc(100% + 20px);
+    background-color: black;
+  }
+  .box17:before {left: 10px;}
+  .box17:after {right: 10px;}
+  .box17 p {
+    margin: 0; 
+    padding: 0;
+    font-family: serif;
+    font-size: 40px;
+  }
+  /*プロフィールボックスここまで*/
+  
+  /*プロフィール*/
+  .profile {
+    background: #FFF;
+    width: 500px;
+    padding: 4rem;
+    margin: 0 auto;
+    border: 1px solid #1a1a1a;
+  }
+  
+  .profile__img {
+    display: block;
+    width: 240px;
+    height: 240px;
+    border-radius:50%;
+    margin: 0 auto;
+  }
+  
+  .profile__name {
+    text-align:center;
+    font-weight:bold;
+    font-size:2.4rem;
+    margin: 1rem auto 1rem;
+    letter-spacing:.1rem;
+  }
+  
+  .profile__desc {
+    line-height:2rem;
+    font-family: serif;
+    font-size:2rem;
+  }
+  
+  /*画像ボックス*/
+  .box18{
+    margin:2em 0;
+    position: relative;
+    padding: 1em 2em;
+    margin: 1em 9rem;
+    width: 165px;
+    top: 500px;
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+  }
+  .box18:before, .box18:after{
+    content: '';
+    position: absolute;
+    top: -10px;
+    width: 2px;
+    height: -webkit-calc(100% + 20px);
+    height: calc(100% + 20px);
+    background-color: black;
+  }
+  .box18:before {left: 10px;}
+  .box18:after {right: 10px;}
+  .box18 p {
+    margin: 0; 
+    padding: 0;
+    font-family: serif;
+    font-size: 40px;
+  }
+  /*画像ボックスここまで*/
+  
+  /*画像*/
+  #photo1{
+    position:relative;
+    top: 520px;
+  left: 232px;
+  }
+  #photo2{
+    position:relative;
+    top: 210px;
+  left: 580px;
+  }
+  #photo3{
+    position:relative;
+    top: -95px;
+  left: 930px;
+  }
+  /*画像ここまで*/
+  
+  /*トップページボタン*/
+  #page-top {
+    display: block;
+    font-weight: bold;
+    padding: 1em;
+    text-align: center;
+    background: #afeeee; /*背景色*/
+    color: #666; /*文字色*/
+    transition: .3s;
+  }
+  /***マウスオーバー時***/
+  #page-top:hover {
+    background: #666; /*背景色*/
+    color: #afeeee; /*文字色*/
+  }
+  /*トップページボタンここまで*/
+  
+  /*footer*/
+  footer {
+  background-color: #afeeee;
+  padding: 20px 0;
+  }
+  
+  footer h2 {
+      width: 1000px;
+      margin: auto;
+      color: #000000;
+      font-size: 1.3rem;
+  }
+  
+  footer p {
+      width: 1000px;
+      margin: 20px auto 0;
+      color: #000000;
+      line-height: 1.8rem;
+  }
+  /*footerここで終わり*/
