@@ -31,9 +31,9 @@ function App() {
   
   <nav class="globalMenuSp">
       <ul>
-          <li><a href="#myprofile">自己紹介</a></li>
-          <li><a href="#work">制作作品</a></li>
-          <li><a href="#">トップ</a></li>
+          <li><a href="#myprofile">1.自己紹介</a></li>
+          <li><a href="#work">2.制作作品</a></li>
+          <li><a href="#">3.トップ</a></li>
       </ul>
   </nav>
 
@@ -81,8 +81,10 @@ function App() {
         Tel:070-3200-9540
     </p>
 </footer>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="./js/Site.js" type="text/javascript"></script>
+
   </div>
   );
 }
